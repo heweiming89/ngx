@@ -3,8 +3,8 @@ import {AfterViewInit, Component, OnInit, ViewEncapsulation} from '@angular/core
 declare let mLayout: any;
 
 @Component({
-  selector: "app-aside-nav",
-  templateUrl: "./aside-nav.component.html",
+  selector: 'app-aside-nav',
+  templateUrl: './aside-nav.component.html',
   encapsulation: ViewEncapsulation.None,
 })
 export class AsideNavComponent implements OnInit, AfterViewInit {

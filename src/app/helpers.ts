@@ -1,4 +1,4 @@
-import * as $ from "jquery";
+import * as $ from 'jquery';
 
 export class Helpers {
   static loadStyles(tag, src) {
@@ -28,7 +28,9 @@ export class Helpers {
    * @param breadcrumbs
    */
   static setBreadcrumbs(breadcrumbs) {
-    if (breadcrumbs) $('.m-subheader__title').addClass('m-subheader__title--separator');
+    if (breadcrumbs) {
+      $('.m-subheader__title').addClass('m-subheader__title--separator');
+    }
 
     let ul = $('.m-subheader__breadcrumbs');
 
@@ -41,7 +43,7 @@ export class Helpers {
 
     $(ul).find('li:not(:first-child)').remove();
     $.each(breadcrumbs, function (k, v) {
-      let li = $('<li/>').addClass('m-nav__item')
+      const li = $('<li/>').addClass('m-nav__item')
         .append($('<a/>').addClass('m-nav__link m-nav__link--icon').attr('routerLink', v.href).attr('title', v.title)
           .append($('<span/>').addClass('m-nav__link-text').text(v.text)));
       $(ul).append($('<li/>').addClass('m-nav__separator').text('-')).append(li);
@@ -50,11 +52,11 @@ export class Helpers {
   }
 
   static setLoading(enable) {
-    let body = $('body');
+    const body = $('body');
     if (enable) {
-      $(body).addClass('m-page--loading-non-block')
+      $(body).addClass('m-page--loading-non-block');
     } else {
-      $(body).removeClass('m-page--loading-non-block')
+      $(body).removeClass('m-page--loading-non-block');
     }
   }
 
