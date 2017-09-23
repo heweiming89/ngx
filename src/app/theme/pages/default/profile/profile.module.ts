@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
-import {LayoutModule} from '../../../../layouts/layout.module';
-import {DefaultComponent} from '../../default.component';
-import {NotFoundComponent} from "./not-found.component";
+import {ProfileComponent} from './profile.component';
+import {LayoutModule} from '../../../layouts/layout.module';
+import {DefaultComponent} from '../default.component';
 
 const routes: Routes = [
   {
@@ -12,7 +12,7 @@ const routes: Routes = [
     "children": [
       {
         "path": "",
-        "component": NotFoundComponent
+        "component": ProfileComponent
       }
     ]
   }
@@ -24,8 +24,10 @@ const routes: Routes = [
   ], exports: [
     RouterModule
   ], declarations: [
-    NotFoundComponent
+    ProfileComponent
   ]
 })
-export class NotFoundModule {
+export class ProfileModule {
+
+
 }

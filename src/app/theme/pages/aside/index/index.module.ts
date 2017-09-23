@@ -1,18 +1,18 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
-import {LayoutModule} from '../../../../layouts/layout.module';
-import {DefaultComponent} from '../../default.component';
-import {NotFoundComponent} from "./not-found.component";
+import {IndexComponent} from './index.component';
+import {LayoutModule} from '../../../layouts/layout.module';
+import {AsideComponent} from '../aside.component';
 
 const routes: Routes = [
   {
     "path": "",
-    "component": DefaultComponent,
+    "component": AsideComponent,
     "children": [
       {
         "path": "",
-        "component": NotFoundComponent
+        "component": IndexComponent
       }
     ]
   }
@@ -24,8 +24,10 @@ const routes: Routes = [
   ], exports: [
     RouterModule
   ], declarations: [
-    NotFoundComponent
+    IndexComponent
   ]
 })
-export class NotFoundModule {
+export class IndexModule {
+
+
 }

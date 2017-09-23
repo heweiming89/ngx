@@ -1,25 +1,27 @@
-import { Component, OnInit, ViewEncapsulation, AfterViewInit } from '@angular/core';
-import { Helpers } from '../../../helpers';
+import {AfterViewInit, Component, OnInit, ViewEncapsulation} from '@angular/core';
 
 declare let mLayout: any;
+
 @Component({
-    selector: "app-header-nav",
-    templateUrl: "./header-nav.component.html",
-    encapsulation: ViewEncapsulation.None,
+  selector: "app-header-nav",
+  templateUrl: "./header-nav.component.html",
+  encapsulation: ViewEncapsulation.None,
 })
 export class HeaderNavComponent implements OnInit, AfterViewInit {
 
 
-    constructor() {
+  constructor() {
 
-    }
-    ngOnInit() {
+  }
 
-    }
-    ngAfterViewInit() {
+  ngOnInit() {
 
-        mLayout.initHeader();
+  }
 
-    }
+  ngAfterViewInit() {
+
+    mLayout.initHeader();
+
+  }
 
 }
